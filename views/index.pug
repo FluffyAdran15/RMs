@@ -1,5 +1,34 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  link(rel='stylesheet' href='main.css')
+  title Police Department Report Form
+section#Title
+  h1 Police Department Report Form
+section#ColorThemeButton
+  button(type='button') Color Theme
+section#SearchFeature
+  p
+    | Search: 
+    input(type='text' placeholder='Search')
+    |  in 
+    select(name='searchdropdown')
+      option(value='IR') I.R#
+      option(value='OccurrenceDate') Occurrence Date(s)
+      option(value='OccurrenceTime') Occurrence Time(s)
+      option(value='OccurrenceType') Occurrence Type
+section#IRReportList
+  ul
+    a(href='form.html')
+      li IR#(MM/DD/YYYY)
+section#NewForm
+  a(href='form.html')
+    button(type='button') New Form
+script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')
+script.
+  function addDarkmodeWidget() {
+  new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
