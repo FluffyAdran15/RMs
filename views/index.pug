@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  link(rel='stylesheet' href='stylesheets/main.css')
+  link(rel='stylesheet' href='main.css')
   title Police Department Report Form
 section#Title
   h1 Police Department Report Form
@@ -25,7 +25,7 @@ section#SearchFeature
       option(value='Model') Model
       option(value='Year') Year
       option(value='Color') Color
-section#IRReportList
+section#IRReportList.scrollable
   ul
     section#option1
       a(href='form.html')
@@ -112,7 +112,7 @@ section#IRReportList
           br
           |                     Color:
 section#NewForm
-  a(href='/catalog/form/create')
+  a(href='form.html')
     button(type='button') New Form
 script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')
 script.
