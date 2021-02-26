@@ -46,6 +46,15 @@ section#BigBorder{
     border: 5px solid black;
 }
 
+section#HomeButton{
+    padding-top: 1%;
+    text-align: center;
+}
+
+section#HomeButton button{
+    padding: 5%;
+}
+
 section#IRNumber p{
     margin-top: 5%;
 }
@@ -103,7 +112,7 @@ section#PersonalInfo1{
 
 section#PersonalInfo2{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 5px;
     grid-row-gap: 0px;
@@ -221,15 +230,19 @@ section#DOB p input{
 }
 
 section#Address p input{
-    width: 68%;
+    width: 58%;
 }
 
 section#Phone p input{
+    width: 68%;
+}
+
+section#SSN p input{
     width: 76%;
 }
 
-section#SSNDriver p input{
-    width: 63%;
+section#DriverNumber p input{
+    width: 71%;
 }
 
 section#Code p select{

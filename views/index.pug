@@ -7,8 +7,6 @@ head
   title Police Department Report Form
 section#Title
   h1 Police Department Report Form
-section#ColorThemeButton
-  button(type='button') Color Theme
 section#SearchFeature
   p
     | Search: 
@@ -16,13 +14,103 @@ section#SearchFeature
     |  in 
     select(name='searchdropdown')
       option(value='IR') I.R#
-      option(value='OccurrenceDate') Occurrence Date(s)
-      option(value='OccurrenceTime') Occurrence Time(s)
-      option(value='OccurrenceType') Occurrence Type
+      option(value='Name') Name
+      option(value='DOB') DOB
+      option(value='Code') Code
+      option(value='Sec') Sex
+      option(value='Height') Height
+      option(value='Weight') Weight
+      option(value='LicensePlate') License Plate #
+      option(value='Make') Make
+      option(value='Model') Model
+      option(value='Year') Year
+      option(value='Color') Color
 section#IRReportList
   ul
-    a(href='form.html')
-      li IR#(MM/DD/YYYY)
+    section#option1
+      a(href='form.html')
+        li
+          | IR#(MM/DD/YYYY) 
+          br
+          hr
+          |                     Name: 
+          br
+          |                     DOB: 
+          br
+          |                     Code: 
+          br
+          |                     Sex: 
+          br
+          |                     Height: 
+          br
+          |                     Weight: 
+          br
+          hr
+          |                     License Plate: 
+          br
+          |                     Make: 
+          br
+          |                     Model: 
+          br
+          |                     Year: 
+          br
+          |                     Color:
+    section#option1
+      a(href='form.html')
+        li
+          | IR#(MM/DD/YYYY) 
+          br
+          hr
+          |                     Name: 
+          br
+          |                     DOB: 
+          br
+          |                     Code: 
+          br
+          |                     Sex: 
+          br
+          |                     Height: 
+          br
+          |                     Weight: 
+          br
+          hr
+          |                     License Plate: 
+          br
+          |                     Make: 
+          br
+          |                     Model: 
+          br
+          |                     Year: 
+          br
+          |                     Color:
+    section#option1
+      a(href='form.html')
+        li
+          | IR#(MM/DD/YYYY) 
+          br
+          hr
+          |                     Name: 
+          br
+          |                     DOB: 
+          br
+          |                     Code: 
+          br
+          |                     Sex: 
+          br
+          |                     Height: 
+          br
+          |                     Weight: 
+          br
+          hr
+          |                     License Plate: 
+          br
+          |                     Make: 
+          br
+          |                     Model: 
+          br
+          |                     Year: 
+          br
+          |                     Color:
 section#NewForm
   a(href='/catalog/form/create')
     button(type='button') New Form

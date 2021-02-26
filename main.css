@@ -23,6 +23,7 @@ button{
 }
 
 section#SearchFeature{
+    padding-top: 5%;
     padding-left: 5%;
 }
 
@@ -36,7 +37,15 @@ a{
 }
 
 ul{
-    list-style-type: circle;
+    list-style-type: none;
+}
+
+li{
+    width: 50%;
+    border: 5px solid black;
+    border-radius: 25px;
+    padding: 1%;
+    margin: 1%;
 }
 
 a:link{
