@@ -14,7 +14,7 @@ var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var dev_db_url = "mongodb+srv://AdrianMarcus2021:MarcusAdrian2021@rms.mhtob.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var dev_db_url = "";
 var mongoDB = process.env.URI || dev_db_url;
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
