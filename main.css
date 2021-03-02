@@ -32,6 +32,11 @@ section#IRReportList{
     padding-top: 2%;
 }
 
+.scrollable {
+    height: 320px;
+    overflow-y: auto;
+}
+
 a{
     text-decoration: none;
 }
