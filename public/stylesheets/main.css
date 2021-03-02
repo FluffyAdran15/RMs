@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Regular.ttf);
+}
+
+html{
+    font-family: Roboto;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+section#ColorThemeButton{
+    text-align: right;
+    padding-right: 5%;
+}
+
+button{
+    padding: 1%;
+    font-family: Roboto;
+}
+
+section#SearchFeature{
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+section#IRReportList{
+    padding-left: 10%;
+    padding-top: 2%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    width: 50%;
+    border: 5px solid black;
+    border-radius: 25px;
+    padding: 1%;
+    margin: 1%;
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: black;
+}
+a:active{
+    color: black;
+}
+
+section#NewForm{
+    padding-left: 5%;
+    padding-top: 2%;
+}
