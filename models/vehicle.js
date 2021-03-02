@@ -15,7 +15,7 @@ var VehicleSchema = new Schema({
     Vec_color:{type:String, required:true},
     Vec_Detail:{type:String, required:true},
     Vec_Reg:{type:String, required:true},
-    Vec_Body:{type:String, required,True}
+    Vec_Body:{type:String, required:true}
 })
 
 
