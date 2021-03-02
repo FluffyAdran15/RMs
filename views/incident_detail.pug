@@ -1,0 +1,197 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  link(rel='stylesheet' href='incident.css')
+  title Police Department Report Form - New Form
+section#Top
+  section#HomeButton
+    a(href='home.html')
+      button(type='button') Go Back
+  section#Title
+    h1 Incident Details
+  section#ColorThemeButton
+section#BigBorder
+  section#MainInfo
+    section#MainInfo1
+      section#IRNumber
+        p
+          | I.R# 
+          input(type='text' placeholder='' readonly='')
+      section#OccurrenceDate
+        p
+          | Occurrence Date(s) 
+          input(type='text' placeholder='' readonly='')
+      section#OccurrenceTime
+        p
+          | Occurrence Time(s) 
+          input(type='text' placeholder='' readonly='')
+    section#OccurrenceType
+      p
+        | Occurrence Type 
+        input(type='text' placeholder='' readonly='')
+    section#MainInfo2
+      section#Location
+        p
+          | Location 
+          input(type='text' placeholder='' readonly='')
+      section#LocationName
+        p
+          | Location Name 
+          input(type='text' placeholder='' readonly='')
+  hr
+  // ---------- Literal Line Break ----------
+  section#PersonalInfo
+    section#PersonalInfo1
+      section#LastName
+        p
+          | Last 
+          input(type='text' placeholder='' readonly='')
+      section#FirstName
+        p
+          | First 
+          input(type='text' placeholder='' readonly='')
+      section#MiddleInitial
+        p
+          | M 
+          input(type='text' placeholder='' readonly='')
+      section#Alias
+        p
+          | Alias 
+          input(type='text' placeholder='' readonly='')
+      section#DOB
+        p
+          | DOB 
+          input(type='text' pattern='^d{2}/d{2}/d{4}$' placeholder='MM/DD/YYYY' readonly='')
+    section#PersonalInfo2
+      section#Address
+        p
+          | Address 
+          input(type='text' placeholder='' readonly='')
+      section#Phone
+        p
+          | Phone 
+          input(type='tel' pattern='^d{3}-d{3}-d{4}$' placeholder='XXX-XXX-XXXX' readonly='')
+      section#SSN
+        p
+          | SSN 
+          input(type='text' placeholder='' readonly='')
+      section#DriverNumber
+        p
+          | DL# 
+          input(type='text' placeholder='' readonly='')
+    section#PersonalInfo3
+      section#Code
+        p
+          | Code 
+          input(type='text' placeholder='' readonly='')
+      section#Race
+        p
+          | Race 
+          input(type='text' placeholder='' readonly='')
+      section#Sex
+        p
+          | Sex 
+          input(type='text' placeholder='' readonly='')
+      section#Height
+        p
+          | Height 
+          input(type='number' placeholder='' readonly='')
+      section#Weight
+        p
+          | Weight 
+          input(type='number' placeholder='' readonly='')
+      section#Eyes
+        p
+          | Eyes 
+          input(type='text' placeholder='' readonly='')
+      section#Hair
+        p
+          | Hair 
+          input(type='text' placeholder='' readonly='')
+    section#PersonalInfo4
+      section#Marks
+        p
+          | Scars/Marks/Tats 
+          input(type='text' placeholder='' readonly='')
+      section#Hazard
+        p
+          | Hazardous 
+          input(type='text' placeholder='' readonly='')
+      section#Gang
+        p
+          | Gang 
+          input(type='text' placeholder='' readonly='')
+  hr
+  // ---------- Literal Line Break ----------
+  section#Narritive
+    h3 Narritive
+    textarea(type='text' placeholder='' rows='10' style='resize: none;' readonly='')
+  hr
+  // ---------- Literal Line Break ----------
+  section#OfficerInfo
+    section#OfficerName
+      p
+        | Officer 
+        input(type='text' placeholder='' readonly='')
+    section#OfficerNumber
+      p
+        | Serial # 
+        input(type='number' placeholder='' readonly='')
+    section#ReportDateTime
+      p
+        | Report Date/Time 
+        input#report-time(type='datetime-local' name='report-time' value='2021-02-22T18:30' min='1860-01-01T00:00' max='9999-12-31T24:00' readonly='')
+  hr
+  // ---------- Literal Line Break ----------
+  section#VehicleBikeInfo
+    section#VehicleBikeInfoText
+      h3 Vehicle/Bike Information
+    section#VehicleInfo1
+      section#VehicleNumber
+        p
+          | Vehicle # 
+          input(type='text' placeholder='' readonly='')
+      section#VINSerialNumber
+        p
+          | VIN/Serial Number 
+          input(type='text' placeholder='' readonly='')
+      section#LicensePlateNumberState
+        p
+          | License #/State 
+          input(type='text' placeholder='' readonly='')
+    section#VehicleInfo2
+      section#Color
+        p
+          | Color 
+          input(type='text' placeholder='' readonly='')
+      section#Year
+        p
+          | Year 
+          input(type='text' placeholder='' readonly='')
+      section#Make
+        p
+          | Make 
+          input(type='text' placeholder='' readonly='')
+      section#Model
+        p
+          | Model 
+          input(type='text' placeholder='' readonly='')
+      section#Style
+        p
+          | Style 
+          input(type='text' placeholder='' readonly='')
+  hr#SmallLine
+  // ---------- Literal Line Break ----------
+  section#VehicleBikeDetails
+    h3 Vehicle/Bike Details
+    textarea(type='text' placeholder='' rows='10' style='resize: none;' readonly='')
+section#DeleteButton
+  button(type='submit') Delete Form
+script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')
+script.
+  function addDarkmodeWidget() {
+  new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);

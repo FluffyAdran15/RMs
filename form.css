@@ -71,6 +71,18 @@ section#ColorThemeButton{
     padding-right: 25%;
 }
 
+section#AddPersonButton{
+    text-align: right;
+    padding-top: 1%;
+    padding-right: 1%;
+}
+
+section#AddPersonButton{
+    text-align: right;
+    padding-top: 1%;
+    padding-right: 1%;
+}
+
 section#Top{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
