@@ -36,6 +36,7 @@ hr{
 button{
     padding: 1%;
     font-family: Roboto;
+    cursor: pointer;
 }
 
 hr#SmallLine{
@@ -71,16 +72,21 @@ section#ColorThemeButton{
     padding-right: 25%;
 }
 
-section#AddPersonButton{
-    text-align: right;
-    padding-top: 1%;
-    padding-right: 1%;
+section#PersonalInfo button{
+    margin-left: 92.7%;
+    padding-top: 0.065%;
+    padding-bottom: 0.065%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    border-radius: 100%;
 }
 
-section#AddPersonButton{
-    text-align: right;
-    padding-top: 1%;
-    padding-right: 1%;
+input#RemovePersonButton{
+    padding-top: 0.04%;
+    padding-bottom: 0.04%;
+    padding-left: 0.625%;
+    padding-right: 0.625%;
+    border-radius: 100%;
 }
 
 section#Top{
