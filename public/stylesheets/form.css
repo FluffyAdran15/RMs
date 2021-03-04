@@ -146,9 +146,9 @@ section#PersonalInfo3{
 
 section#PersonalInfo4{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1.25fr 0.75fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 5px;
+    grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
@@ -292,15 +292,15 @@ section#Hair p select{
 }
 
 section#Marks p input{
-    width: 37%;
+    width: 39%;
 }
 
 section#Hazard p input{
-    width: 62%;
+    width: 71%;
 }
 
 section#Gang p input{
-    width: 75%;
+    width: 67%;
 }
 
 section#OfficerName p input{
