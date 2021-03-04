@@ -3,6 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  script(src='/javascripts/delteButton.js')
   link(rel='stylesheet' href='/stylesheets/incident.css')
   title Police Department Report Form - New Form
 section#Top
@@ -188,7 +189,7 @@ section#BigBorder
     h3 Vehicle/Bike Details
     textarea(type='text' placeholder='' rows='10' style='resize: none;' readonly='')
 section#DeleteButton
-  button(type='submit') Delete Form
+  button(type='submit' onclick='deleteButton()') Delete Form
 script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')
 script.
   function addDarkmodeWidget() {
