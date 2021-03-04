@@ -1,10 +1,6 @@
-
 var Vehicle = require('../models/vehicle');
-
-
-exports.index = function (req, res){
-        res.render('index');
-};
+var incident = require('../models/incident');
+var person = require('../models/person');
 
 
 

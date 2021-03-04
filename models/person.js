@@ -3,12 +3,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var personSchema = new Schema({
+    coder:{type:String, required:true},
     first_name: {type: String, required: true, maxlength: 100 },
     last_name: {type: String, required: true, maxlength: 100 },
     mid_name: {type: String,required: false, maxlength: 1, minlength: 1},
     alias:{type: String, required:false,},
     sos_num:{type: Number, required: true},
-    race:{type: String, required: true},
+    dl_num:{type:Number, required:true},
+    racer:{type: String, required: true},
     gen:{type: String, required:true},
     weight:{type: Number, required: true},
     height:{type: Number, required:true, max:1000, min: 10},
@@ -16,8 +18,10 @@ var personSchema = new Schema({
     hair:{type: String, required: true, maxlength:3},
     Dob:{type: Date, required: true, },
     stm:{type: String, required: false},
-    address:{type: String, required: true},
-    phone:{type: Number, required:true, maxlength: 10}
+    adress:{type: String, required: true},
+    phone:{type: Number, required:true, maxlength: 10},
+    gang_aff:{type:String, required:false},
+    hazard:{type:String, requird:false}
 });
 
 
