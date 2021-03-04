@@ -36,7 +36,6 @@ hr{
 button{
     padding: 1%;
     font-family: Roboto;
-    cursor: pointer;
 }
 
 hr#SmallLine{
@@ -70,23 +69,6 @@ section#ColorThemeButton{
     text-align: right;
     padding-top: 10%;
     padding-right: 25%;
-}
-
-section#PersonalInfo button{
-    margin-left: 92.7%;
-    padding-top: 0.065%;
-    padding-bottom: 0.065%;
-    padding-left: 0.5%;
-    padding-right: 0.5%;
-    border-radius: 100%;
-}
-
-input#RemovePersonButton{
-    padding-top: 0.04%;
-    padding-bottom: 0.04%;
-    padding-left: 0.625%;
-    padding-right: 0.625%;
-    border-radius: 100%;
 }
 
 section#Top{
@@ -180,9 +162,9 @@ section#ColorThemeButton > button{
     margin-bottom: 5%;
 }
 
-section#SubmitButton > button{
+section#DeleteButton > button{
     margin-top: 1%;
-    margin-left: 1%;
+    margin-left: 91%;
 }
 
 section#Narritive h3{
@@ -235,8 +217,8 @@ section#FirstName p input{
     width: 72%;
 }
 
-section#MiddleInitial p select{
-    width: 77%;
+section#MiddleInitial p input{
+    width: 67%;
 }
 
 section#Alias p input{
@@ -263,16 +245,16 @@ section#DriverNumber p input{
     width: 71%;
 }
 
-section#Code p select{
-    width: 51%;
+section#Code p input{
+    width: 43%;
 }
 
-section#Race p select{
-    width: 60%;
+section#Race p input{
+    width: 53%;
 }
 
-section#Sex p select{
-    width: 70%;
+section#Sex p input{
+    width: 62%;
 }
 
 section#Height p input{
@@ -283,12 +265,12 @@ section#Weight p input{
     width: 38%;
 }
 
-section#Eyes p select{
-    width: 62%;
+section#Eyes p input{
+    width: 55%;
 }
 
-section#Hair p select{
-    width: 55%;
+section#Hair p input{
+    width: 47%;
 }
 
 section#Marks p input{
@@ -329,8 +311,8 @@ section#LicensePlateNumberState p input{
     width: 42%;
 }
 
-section#Color p select{
-    width: 64%;
+section#Color p input{
+    width: 58%;
 }
 
 section#Year p input{
@@ -411,3 +393,16 @@ section#VehicleBikeDetails textarea{
     height: 50%;
     margin-bottom: 1%;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+  }
