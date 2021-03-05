@@ -25,9 +25,17 @@ var personSchema = new Schema({
 });
 
 
-// Virtual for Name "full" name.
-personSchema.virtual('name').get(function () {
-    return this.first_name + ', '+ this.mid_name + ' ' + this.last_name;
+// Virtual for First Name
+personSchema.virtual('first_name').get(function () {
+    return this.first_name;
+});
+// Virtual for Middle Name
+personSchema.virtual('mid_name').get(function () {
+    return this.mid_name;
+});
+// Virtual for Last Name
+personSchema.virtual('last_name').get(function () {
+    return this.last_name;
 });
 // Virtual for the person instance url
 personSchema.virtual('pers').get(function () {
@@ -74,7 +82,7 @@ personSchema.virtual('eye').get(function () {
 personSchema.virtual('hair').get(function () {
     return this.hair;
 });
-// Virtual for Stm??????? I dunno, I'm not even supposed to be doing the back end development
+// Virtual for Scars Tats Marks
 personSchema.virtual('stm').get(function () {
     return this.stm;
 });

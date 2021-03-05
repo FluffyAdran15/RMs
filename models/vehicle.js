@@ -32,3 +32,40 @@ VehicleSchema.virtual('LicState').get(function (){
 VehicleSchema.virtual('car').get(function (){
     return '/catalog/Vechicle' + this._id;
 })
+
+// Virtual for Vehicle Number
+personSchema.virtual('Vec_num').get(function () {
+    return this.Vec_num;
+});
+// Virtual for Vehicle State
+personSchema.virtual('Vec_state').get(function () {
+    return this.Vec_state;
+});
+// Virtual for Vehicle Year
+personSchema.virtual('Vec_Year').get(function () {
+    return this.Vec_Year;
+});
+// Virtual for Vehicle Make
+personSchema.virtual('Vec_Make').get(function () {
+    return this.Vec_Make;
+});
+// Virtual for Vehicle Model
+personSchema.virtual('Vec_Model').get(function () {
+    return this.Vec_Model;
+});
+// Virtual for Vehicle Color
+personSchema.virtual('Vec_color').get(function () {
+    return this.Vec_color;
+});
+// Virtual for Vehicle Detail
+personSchema.virtual('Vec_Detail').get(function () {
+    return this.Vec_Detail;
+});
+// Virtual for Vehicle Reg
+personSchema.virtual('Vec_Reg').get(function () {
+    return this.Vec_Reg;
+});
+// Virtual for Vehicle Body
+personSchema.virtual('Vec_Body').get(function () {
+    return this.Vec_Body;
+});
