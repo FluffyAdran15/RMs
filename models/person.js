@@ -38,5 +38,62 @@ personSchema.virtual('DOB').get(function () {
     return DateTime.fromJSDate(this.date_of_birth).toISODate(); //format 'YYYY-MM-DD'
 });
 
+// Virtual for Alias
+personSchema.virtual('alias').get(function () {
+    return this.alias;
+});
+// Virtual for Social Security Number
+personSchema.virtual('sos_num').get(function () {
+    return this.sos_num;
+});
+// Virtual for Driver's Liscense Number
+personSchema.virtual('dl_num').get(function () {
+    return this.dl_num;
+});
+// Virtual for Race
+personSchema.virtual('race').get(function () {
+    return this.racer;
+});
+// Virtual for Gender
+personSchema.virtual('gender').get(function () {
+    return this.gen;
+});
+// Virtual for Weight
+personSchema.virtual('weight').get(function () {
+    return this.weight;
+});
+// Virtual for Height
+personSchema.virtual('height').get(function () {
+    return this.height;
+});
+// Virtual for Eye Color
+personSchema.virtual('eye').get(function () {
+    return this.eye;
+});
+// Virtual for Hair Color
+personSchema.virtual('hair').get(function () {
+    return this.hair;
+});
+// Virtual for Stm??????? I dunno, I'm not even supposed to be doing the back end development
+personSchema.virtual('stm').get(function () {
+    return this.stm;
+});
+// Virtual for Address
+personSchema.virtual('address').get(function () {
+    return this.adress;
+});
+// Virtual for Phone
+personSchema.virtual('phone').get(function () {
+    return this.phone;
+});
+// Virtual for Gang Affliation
+personSchema.virtual('gang').get(function () {
+    return this.gang_aff;
+});
+// Virtual for Hazard
+personSchema.virtual('hazard').get(function () {
+    return this.hazard;
+});
+
 // Export model.
 module.exports = mongoose.model('person', personSchema);
