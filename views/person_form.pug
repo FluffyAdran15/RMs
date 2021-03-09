@@ -13,168 +13,145 @@ section#Top
     h1 Person Report Form
   section#ColorThemeButton
 section#BigBorder
-  br
-  section#PersonalInfo
-    section#PersonalInfo1
-      section#LastName
-        p
-          | Last 
-          input(type='text' placeholder='')
-      section#FirstName
-        p
-          | First 
-          input(type='text' placeholder='')
-      section#MiddleInitial
-        p
-          | M
-          select(name='initialdropdown')
-            option(value='A') A
-            option(value='B') B
-            option(value='C') C
-            option(value='D') D
-            option(value='E') E
-            option(value='F') F
-            option(value='G') G
-            option(value='H') H
-            option(value='I') I
-            option(value='J') J
-            option(value='K') K
-            option(value='L') L
-            option(value='M') M
-            option(value='N') N
-            option(value='O') O
-            option(value='P') P
-            option(value='Q') Q
-            option(value='R') R
-            option(value='S') S
-            option(value='T') T
-            option(value='U') U
-            option(value='V') V
-            option(value='W') W
-            option(value='X') X
-            option(value='Y') Y
-            option(value='Z') Z
-      section#Alias
-        p
-          | Alias 
-          input(type='text' placeholder='')
-      section#DOB
-        p
-          | DOB 
-          input(type='text' pattern='^d{2}/d{2}/d{4}$' placeholder='MM/DD/YYYY')
-    section#PersonalInfo2
-      section#Address
-        p
-          | Address 
-          input(type='text' placeholder='')
-      section#Phone
-        p
-          | Phone 
-          input(type='tel' pattern='^d{3}-d{3}-d{4}$' placeholder='XXX-XXX-XXXX')
-      section#SSN
-        p
-          | SSN 
-          input(type='text' placeholder='')
-      section#DriverNumber
-        p
-          | DL# 
-          input(type='text' placeholder='')
-    section#PersonalInfo3
-      section#Code
-        p
-          | Code
-          select(name='codedropdown')
-            option(value='Robbery') 211
-            option(value='Threat') 236
-            option(value='Drugs') 237
-            option(value='Assault') 240
-            option(value='WeaponsViolations') 245
-            option(value='Rape') 261
-            option(value='Fraud') 318
-            option(value='DrunkDriver') 390D
-            option(value='SubjectDisturbing') 415
-            option(value='CriminalDamage') 415B
-            option(value='ViolationOfCourtOrder') 415O
-            option(value='Trespassing') 418T
-            option(value='Homicide') 451
-            option(value='Burglary') 459
-            option(value='Theft') 487
-            option(value='MissingPerson') 601
-            option(value='SuspiciousPersonActivity') 647
-            option(value='DeadBody') 901H
-            option(value='InsanePerson') 918
-            option(value='Collision') 961
-      section#Race
-        p
-          | Race
-          select(name='racedropdown')
-            option(value='AmericanIndian') American Indian
-            option(value='Asian') Asian
-            option(value='AfricanAmerican') African American
-            option(value='NativeHawaiian') Native Hawaiian
-            option(value='Caucasian') Caucasian
-            option(value='Hispanic') Hispanic
-            option(value='Latino') Latino
-      section#Sex
-        p
-          | Sex
-          select(name='sexdropdown')
-            option(value='Male') M
-            option(value='Female') F
-            option(value='Unknown') U
-      section#Height
-        p
-          | Height 
-          input(type='number' placeholder='')
-      section#Weight
-        p
-          | Weight 
-          input(type='number' placeholder='')
-      section#Eyes
-        p
-          | Eyes
-          select(name='eyedropdown')
-            option(value='Black') BLK
-            option(value='Blue') BLU
-            option(value='Brown') BRO
-            option(value='Gray') GRY
-            option(value='Green') GRN
-            option(value='White') WHI
-            option(value='Blonde') BLN
-            option(value='Hazel') HAZ
-            option(value='Red') RED
-            option(value='Other') OTH
-            option(value='Unknown') UNK
-      section#Hair
-        p
-          | Hair
-          select(name='hairdropdown')
-            option(value='Black') BLK
-            option(value='Blue') BLU
-            option(value='Brown') BRO
-            option(value='Gray') GRY
-            option(value='Green') GRN
-            option(value='White') WHI
-            option(value='Bald') BLD
-            option(value='Blonde') BLN
-            option(value='Hazel') HAZ
-            option(value='Red') RED
-            option(value='Other') OTH
-            option(value='Unknown') UNK
-    section#PersonalInfo4
-      section#Marks
-        p
-          | Scars/Marks/Tats 
-          input(type='text' placeholder='')
-      section#Hazard
-        p
-          | Hazardous 
-          input(type='text' placeholder='')
-      section#Gang
-        p
-          | Gang 
-          input(type='text' placeholder='')
-  br
+  form(method='POST' action='')
+    br
+    section#PersonalInfo
+      section#PersonalInfo1
+        section#LastName
+          p
+            | Last 
+            input(type='text' placeholder='')
+        section#FirstName
+          p
+            | First 
+            input(type='text' placeholder='')
+        section#MiddleInitial
+          p
+            | M
+            select(name='initialdropdown')
+              option(value='A') A
+              option(value='B') B
+              option(value='C') C
+              option(value='D') D
+              option(value='E') E
+              option(value='F') F
+              option(value='G') G
+              option(value='H') H
+              option(value='I') I
+              option(value='J') J
+              option(value='K') K
+              option(value='L') L
+              option(value='M') M
+              option(value='N') N
+              option(value='O') O
+              option(value='P') P
+              option(value='Q') Q
+              option(value='R') R
+              option(value='S') S
+              option(value='T') T
+              option(value='U') U
+              option(value='V') V
+              option(value='W') W
+              option(value='X') X
+              option(value='Y') Y
+              option(value='Z') Z
+        section#Alias
+          p
+            | Alias 
+            input(type='text' placeholder='')
+        section#DOB
+          p
+            | DOB 
+            input(type='text' pattern='^d{2}/d{2}/d{4}$' placeholder='MM/DD/YYYY')
+      section#PersonalInfo2
+        section#Address
+          p
+            | Address 
+            input(type='text' placeholder='')
+        section#Phone
+          p
+            | Phone 
+            input(type='tel' pattern='^d{3}-d{3}-d{4}$' placeholder='XXX-XXX-XXXX')
+        section#SSN
+          p
+            | SSN 
+            input(type='text' placeholder='')
+        section#DriverNumber
+          p
+            | DL# 
+            input(type='text' placeholder='')
+      section#PersonalInfo3
+        section#Race
+          p
+            | Race
+            select(name='racedropdown')
+              option(value='AmericanIndian') American Indian
+              option(value='Asian') Asian
+              option(value='AfricanAmerican') African American
+              option(value='NativeHawaiian') Native Hawaiian
+              option(value='Caucasian') Caucasian
+              option(value='Hispanic') Hispanic
+              option(value='Latino') Latino
+        section#Sex
+          p
+            | Sex
+            select(name='sexdropdown')
+              option(value='Male') M
+              option(value='Female') F
+              option(value='Unknown') U
+        section#Height
+          p
+            | Height 
+            input(type='number' placeholder='')
+        section#Weight
+          p
+            | Weight 
+            input(type='number' placeholder='')
+        section#Eyes
+          p
+            | Eyes
+            select(name='eyedropdown')
+              option(value='Black') BLK
+              option(value='Blue') BLU
+              option(value='Brown') BRO
+              option(value='Gray') GRY
+              option(value='Green') GRN
+              option(value='White') WHI
+              option(value='Blonde') BLN
+              option(value='Hazel') HAZ
+              option(value='Red') RED
+              option(value='Other') OTH
+              option(value='Unknown') UNK
+        section#Hair
+          p
+            | Hair
+            select(name='hairdropdown')
+              option(value='Black') BLK
+              option(value='Blue') BLU
+              option(value='Brown') BRO
+              option(value='Gray') GRY
+              option(value='Green') GRN
+              option(value='White') WHI
+              option(value='Bald') BLD
+              option(value='Blonde') BLN
+              option(value='Hazel') HAZ
+              option(value='Red') RED
+              option(value='Other') OTH
+              option(value='Unknown') UNK
+      section#PersonalInfo4
+        section#Marks
+          p
+            | Scars/Marks/Tats 
+            input(type='text' placeholder='')
+        section#Hazard
+          p
+            | Hazardous 
+            input(type='text' placeholder='')
+        section#Gang
+          p
+            | Gang 
+            input(type='text' placeholder='')
+    br
 section#SubmitButton
   button(type='submit') Submit
 script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')
