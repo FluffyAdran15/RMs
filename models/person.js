@@ -24,17 +24,22 @@ var personSchema = new Schema({
     hazard:{type:String, requird:false}
 });
 
+// Virtual for Person's URL
+personSchema.virtual('url')
+    .get(function () {
+        return '/catalog/person/' + this._id;
+    });
 
 // Virtual for First Name
-personSchema.virtual('first_name').get(function () {
+personSchema.virtual('fist').get(function () {
     return this.first_name;
 });
 // Virtual for Middle Name
-personSchema.virtual('mid_name').get(function () {
+personSchema.virtual('mid').get(function () {
     return this.mid_name;
 });
 // Virtual for Last Name
-personSchema.virtual('last_name').get(function () {
+personSchema.virtual('last').get(function () {
     return this.last_name;
 });
 // Virtual for the person instance url
@@ -47,51 +52,51 @@ personSchema.virtual('DOB').get(function () {
 });
 
 // Virtual for Alias
-personSchema.virtual('alias').get(function () {
+personSchema.virtual('aliass').get(function () {
     return this.alias;
 });
 // Virtual for Social Security Number
-personSchema.virtual('sos_num').get(function () {
+personSchema.virtual('sosnum').get(function () {
     return this.sos_num;
 });
 // Virtual for Driver's Liscense Number
-personSchema.virtual('dl_num').get(function () {
+personSchema.virtual('dlnum').get(function () {
     return this.dl_num;
 });
 // Virtual for Race
-personSchema.virtual('race').get(function () {
+personSchema.virtual('roce').get(function () {
     return this.racer;
 });
 // Virtual for Gender
-personSchema.virtual('gender').get(function () {
+personSchema.virtual('gander').get(function () {
     return this.gen;
 });
 // Virtual for Weight
-personSchema.virtual('weight').get(function () {
+personSchema.virtual('wieght').get(function () {
     return this.weight;
 });
 // Virtual for Height
-personSchema.virtual('height').get(function () {
+personSchema.virtual('hieght').get(function () {
     return this.height;
 });
 // Virtual for Eye Color
-personSchema.virtual('eye').get(function () {
+personSchema.virtual('eyes').get(function () {
     return this.eye;
 });
 // Virtual for Hair Color
-personSchema.virtual('hair').get(function () {
+personSchema.virtual('hairs').get(function () {
     return this.hair;
 });
 // Virtual for Scars Tats Marks
-personSchema.virtual('stm').get(function () {
+personSchema.virtual('stms').get(function () {
     return this.stm;
 });
 // Virtual for Address
-personSchema.virtual('address').get(function () {
+personSchema.virtual('addresss').get(function () {
     return this.adress;
 });
 // Virtual for Phone
-personSchema.virtual('phone').get(function () {
+personSchema.virtual('phonse').get(function () {
     return this.phone;
 });
 // Virtual for Gang Affliation
@@ -99,9 +104,8 @@ personSchema.virtual('gang').get(function () {
     return this.gang_aff;
 });
 // Virtual for Hazard
-personSchema.virtual('hazard').get(function () {
+personSchema.virtual('hazards').get(function () {
     return this.hazard;
 });
 
-// Export model.
-module.exports = mongoose.model('person', personSchema);
+ 
