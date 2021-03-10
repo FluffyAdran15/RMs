@@ -103,7 +103,7 @@ exports.person_create_post = [
         );
         if (!errors.isEmpty()) {
             // There are errors. Render form again with sanitized values/errors messages.
-            res.render('person_form', {errors: errors.array() });
+            res.render('person_form', {person:person, errors: errors.array() });
             return;
         }
         else {
@@ -183,10 +183,10 @@ exports.person_update_post = [
         }
         else {
             // Data from form is valid. Update the record.
-            Person.findByIdAndUpdate(req.params.id, person, {}, function (err, person) {
+            Person.findByIdAndUpdate(req.params.id, person, {}, function (err, theperson) {
                 if (err) { return next(err); }
                 // Successful - redirect to genre detail page.
-                res.redirect(person.url);
+                res.redirect(theperson.url);
             });
         }
     }

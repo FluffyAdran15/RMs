@@ -25,8 +25,7 @@ var personSchema = new Schema({
 });
 
 // Virtual for Person's URL
-personSchema.virtual('url')
-    .get(function () {
+personSchema.virtual('url').get(function () {
         return '/catalog/person/' + this._id;
     });
 
