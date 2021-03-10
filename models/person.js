@@ -56,11 +56,11 @@ personSchema.virtual('aliass').get(function () {
     return this.alias;
 });
 // Virtual for Social Security Number
-personSchema.virtual('sosnum').get(function () {
+personSchema.virtual('sosNum').get(function () {
     return this.sos_num;
 });
 // Virtual for Driver's Liscense Number
-personSchema.virtual('dlnum').get(function () {
+personSchema.virtual('dlNum').get(function () {
     return this.dl_num;
 });
 // Virtual for Race
