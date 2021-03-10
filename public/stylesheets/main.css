@@ -17,6 +17,10 @@ section#ColorThemeButton{
     padding-right: 5%;
 }
 
+section#NewForm button{
+    margin: 1%;
+}
+
 button{
     padding: 1%;
     font-family: Roboto;

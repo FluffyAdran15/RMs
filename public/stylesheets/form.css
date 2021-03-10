@@ -86,6 +86,7 @@ input#RemovePersonButton{
     padding-bottom: 0.04%;
     padding-left: 0.625%;
     padding-right: 0.625%;
+    margin-left: 1%;
     border-radius: 100%;
 }
 

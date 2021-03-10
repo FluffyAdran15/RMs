@@ -7,7 +7,7 @@ head
   title Police Department Report Form - New Form
 section#Top
   section#HomeButton
-    a(href='home.html')
+    a(href='/catalog')
       button(type='button') Go Back
   section#Title
     h1 Vehicle/Bike Report Form
@@ -35,6 +35,7 @@ form(method='POST' action='')
           p
             | Color
             select(name='colordropdown')
+              option(value='Blank') 
               option(value='Beige') BGE
               option(value='Black') BLK
               option(value='Blue') BLU
