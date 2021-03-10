@@ -21,41 +21,41 @@ section#BigBorder
       section#VehicleNumber
         p
           | Vehicle # 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Vec_num}' readonly='')
       section#VINSerialNumber
         p
           | VIN/Serial Number 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Reg}' readonly='')
       section#LicensePlateNumberState
         p
           | License #/State 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_state}' readonly='')
     section#VehicleInfo2
       section#Color
         p
           | Color 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_color}' readonly='')
       section#Year
         p
           | Year 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Vec_Year}' readonly='')
       section#Make
         p
           | Make 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Make}' readonly='')
       section#Model
         p
           | Model 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Model}' readonly='')
       section#Style
         p
           | Style 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Body}' readonly='')
   hr#SmallLine
   // ---------- Literal Line Break ----------
   section#VehicleBikeDetails
     h3 Vehicle/Bike Details
-    textarea(type='text' placeholder='' rows='10' style='resize: none;' readonly='')
+    textarea(type='text' placeholder='#{vehicle.Veh_Detail}' rows='10' style='resize: none;' readonly='')
 section#DeleteButton
   button(type='submit' onclick='deleteButton()') Delete Form
 script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')

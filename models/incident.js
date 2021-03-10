@@ -13,8 +13,8 @@ var IncidentSchema = new Schema({
     location_name:{type:String,  required: true},
     narritive:{type:String,  required: false},
     off_serialNum:{type:Number, required: true},
-    repoDate:{type: Date, required: true}  
-
+    repoDate:{type: Date, required: true},  
+    off_name:{type:String,  required: false}
 });
 
 // Virtual for IR
@@ -30,7 +30,7 @@ IncidentSchema.virtual('occurence_time').get(function () {
     return this.occur_time;
 });
 // Virtual for Incident Type
-IncidentSchema.virtual('incident').get(function () {
+IncidentSchema.virtual('incidentType').get(function () {
     return this.incident_type;
 });
 // Virtual for Location
@@ -44,6 +44,10 @@ IncidentSchema.virtual('locationPlaceName').get(function () {
 // Virtual for Narritive
 IncidentSchema.virtual('narr').get(function () {
     return this.narritive;
+});
+// Virtual for Officer Name
+IncidentSchema.virtual('officer_name').get(function () {
+    return this.off_name;
 });
 // Virtual for Officer Serial Number
 IncidentSchema.virtual('officer_serialNum').get(function () {

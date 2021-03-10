@@ -19,28 +19,28 @@ section#BigBorder
       section#IRNumber
         p
           | I.R# 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{incident.irr}' readonly='')
       section#OccurrenceDate
         p
           | Occurrence Date(s) 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{incident.occurence}' readonly='')
       section#OccurrenceTime
         p
           | Occurrence Time(s) 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{incident.occurence_time}' readonly='')
     section#OccurrenceType
       p
         | Occurrence Type 
-        input(type='text' placeholder='' readonly='')
+        input(type='text' placeholder='#{incident.incidentType}' readonly='')
     section#MainInfo2
       section#Location
         p
           | Location 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{incident.locationPlace}' readonly='')
       section#LocationName
         p
           | Location Name 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{incident.locationPlaceName}' readonly='')
   hr
   // ---------- Literal Line Break ----------
   section#PersonalInfo
@@ -48,40 +48,40 @@ section#BigBorder
       section#LastName
         p
           | Last 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.last}' readonly='')
       section#FirstName
         p
           | First 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.fist}' readonly='')
       section#MiddleInitial
         p
           | M 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.mid}' readonly='')
       section#Alias
         p
           | Alias 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.aliass}' readonly='')
       section#DOB
         p
           | DOB 
-          input(type='text' pattern='^d{2}/d{2}/d{4}$' placeholder='MM/DD/YYYY' readonly='')
+          input(type='text' pattern='^d{2}/d{2}/d{4}$' placeholder='#{person.DOB}' readonly='')
     section#PersonalInfo2
       section#Address
         p
           | Address 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.addresss}' readonly='')
       section#Phone
         p
           | Phone 
-          input(type='tel' pattern='^d{3}-d{3}-d{4}$' placeholder='XXX-XXX-XXXX' readonly='')
+          input(type='tel' pattern='^d{3}-d{3}-d{4}$' placeholder='#{person.phonse}' readonly='')
       section#SSN
         p
           | SSN 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.sosNum}' readonly='')
       section#DriverNumber
         p
           | DL# 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.dlNum}' readonly='')
     section#PersonalInfo3
       section#Code
         p
@@ -90,60 +90,60 @@ section#BigBorder
       section#Race
         p
           | Race 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.roce}' readonly='')
       section#Sex
         p
           | Sex 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.gander}' readonly='')
       section#Height
         p
           | Height 
-          input(type='number' placeholder='' readonly='')
+          input(type='number' placeholder='#{person.hieght}' readonly='')
       section#Weight
         p
           | Weight 
-          input(type='number' placeholder='' readonly='')
+          input(type='number' placeholder='#{person.wieght}' readonly='')
       section#Eyes
         p
           | Eyes 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.eyes}' readonly='')
       section#Hair
         p
           | Hair 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.hairs}' readonly='')
     section#PersonalInfo4
       section#Marks
         p
           | Scars/Marks/Tats 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.stms}' readonly='')
       section#Hazard
         p
           | Hazardous 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.hazards}' readonly='')
       section#Gang
         p
           | Gang 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{person.gang}' readonly='')
   hr
   // ---------- Literal Line Break ----------
   section#Narritive
     h3 Narritive
-    textarea(type='text' placeholder='' rows='10' style='resize: none;' readonly='')
+    textarea(type='text' placeholder='#{incident.narr}' rows='10' style='resize: none;' readonly='')
   hr
   // ---------- Literal Line Break ----------
   section#OfficerInfo
     section#OfficerName
       p
         | Officer 
-        input(type='text' placeholder='' readonly='')
+        input(type='text' placeholder='#{incident.officer_name}' readonly='')
     section#OfficerNumber
       p
         | Serial # 
-        input(type='number' placeholder='' readonly='')
+        input(type='number' placeholder='#{incident.officer_serialNum}' readonly='')
     section#ReportDateTime
       p
         | Report Date/Time 
-        input#report-time(type='datetime-local' name='report-time' value='2021-02-22T18:30' min='1860-01-01T00:00' max='9999-12-31T24:00' readonly='')
+        input#report-time(type='datetime-local' name='report-time' value='#{incident.reportDate}' min='1860-01-01T00:00' max='9999-12-31T24:00' readonly='')
   hr
   // ---------- Literal Line Break ----------
   section#VehicleBikeInfo
@@ -153,41 +153,41 @@ section#BigBorder
       section#VehicleNumber
         p
           | Vehicle # 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Vec_num}' readonly='')
       section#VINSerialNumber
         p
           | VIN/Serial Number 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Reg}' readonly='')
       section#LicensePlateNumberState
         p
           | License #/State 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_state}' readonly='')
     section#VehicleInfo2
       section#Color
         p
           | Color 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_color}' readonly='')
       section#Year
         p
           | Year 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Vec_Year}' readonly='')
       section#Make
         p
           | Make 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Make}' readonly='')
       section#Model
         p
           | Model 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Model}' readonly='')
       section#Style
         p
           | Style 
-          input(type='text' placeholder='' readonly='')
+          input(type='text' placeholder='#{vehicle.Veh_Body}' readonly='')
   hr#SmallLine
   // ---------- Literal Line Break ----------
   section#VehicleBikeDetails
     h3 Vehicle/Bike Details
-    textarea(type='text' placeholder='' rows='10' style='resize: none;' readonly='')
+    textarea(type='text' placeholder='#{vehicle.Veh_Detail}' rows='10' style='resize: none;' readonly='')
 section#DeleteButton
   button(type='submit' onclick='deleteButton()') Delete Form
 script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')
