@@ -210,7 +210,7 @@ form(method='POST' action='')
           p
             | Gang 
             input(type='text' placeholder='')
-      button(onclick='moreFields()') +
+      button#RemovePersonButton(type='button' onclick='moreFields()') +
       input#RemovePersonButton(type='button' value='-' onclick='this.parentNode.parentNode.removeChild(this.parentNode);')
       hr
       // ---------- Literal Line Break ----------
@@ -302,7 +302,7 @@ form(method='POST' action='')
       h3 Vehicle/Bike Details
       textarea(type='text' placeholder='' rows='10' style='resize: none;')
   section#SubmitButton
-    button(type='submit') Submit
+    button#SubmitButton(type='submit') Submit
 script(src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js')
 script.
   function addDarkmodeWidget() {
