@@ -34,6 +34,10 @@ personSchema.virtual('url')
 personSchema.virtual('fist').get(function () {
     return this.first_name;
 });
+// Virtual for Code
+personSchema.virtual('code').get(function () {
+    return this.coder;
+});
 // Virtual for Middle Name
 personSchema.virtual('mid').get(function () {
     return this.mid_name;
