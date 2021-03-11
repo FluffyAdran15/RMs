@@ -88,6 +88,7 @@ exports.incident_create_post = [
         // Create incident object with escaped and trimmed data
         var incident = new Incident(
             {
+                coder: req.body.code,
                 Ir: req.body.Ir,
                 occur: req.body.occur,
                 occur_time: req.body.occur_time,
@@ -173,6 +174,7 @@ body('repoDate').trim().isLength({ min: 1 }).escape().withMessage('Narrative mus
  // Create incident object with escaped and trimmed data
  var incident = new Incident(
      {
+        coder: req.body.code,
          Ir: req.body.Ir,
          occur: req.body.occur,
          occur_time: req.body.occur_time,

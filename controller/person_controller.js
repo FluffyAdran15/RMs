@@ -1,6 +1,6 @@
 var Vehicle = require('../models/vehicle');
 var incident = require('../models/incident');
-var person = require('../models/person');
+var Person = require('../models/person');
 
 
 const { body,validationResult } = require('express-validator');
@@ -68,11 +68,11 @@ exports.person_create_post = [
     // Validate and sanitize fields.
     body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
         .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
-    body('middle_intial').trim().isLength({ max: 1 }).escape().withMessage('Middle intial must be specified.')
+    body('mid_name').trim().isLength({ max: 1 }).escape().withMessage('Middle intial must be specified.')
         .isAlphanumeric().withMessage('Family name has non-alphanumeric characters.'),
     body('last_name').trim().isLength({ min: 1 }).escape().withMessage('Family name must be specified.')
         .isAlphanumeric().withMessage('Family name has non-alphanumeric characters.'),
-    body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
+    body('Dob', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
     // Process request after validation and sanitization.
     (req, res, next) => {
         // Extract the validation errors from a request.
@@ -80,7 +80,7 @@ exports.person_create_post = [
         // Create Person object with escaped and trimmed data
         var person = new Person(
             {
-                coder: req.body.coder,
+                
                 first_name: req.body.first_name,
                 mid_name: req.body.mid_name,
                 last_name: req.body.last_name,
@@ -154,7 +154,6 @@ exports.person_update_post = [
         // Create Author object with escaped and trimmed data (and the old id!)
         var person = new Person(
             {
-                coder: req.body.code,
                 first_name: req.body.first_name,
                 mid_name: req.body.middle_intial,
                 last_name: req.body.last_name,

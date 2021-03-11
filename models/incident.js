@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var IncidentSchema = new Schema({
+    coder:{type:String, required:true},
     Ir:{type:Number, required: true },
     occur:{type: Date,  required: true},
     occur_time:{type:String,  required: true},
