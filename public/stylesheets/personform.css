@@ -39,6 +39,10 @@ button{
     cursor: pointer;
 }
 
+input{
+    cursor: pointer;
+}
+
 hr#SmallLine{
     border: 1px solid black;
 }

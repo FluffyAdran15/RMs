@@ -23,7 +23,13 @@ section#NewForm button{
 
 button{
     padding: 1%;
-    font-family: Roboto;
+    font-family: Roboto, bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input{
+    cursor: pointer;
 }
 
 section#SearchFeature{

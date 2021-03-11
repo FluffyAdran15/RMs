@@ -16,6 +16,10 @@ p{
     margin: 1%;
 }
 
+input{
+    cursor: pointer;
+}
+
 hr{
     border: 2px solid black;
 }
