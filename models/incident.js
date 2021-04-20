@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var IncidentSchema = new Schema({
-    coder:{type:String, required:true},
+    
     Ir:{type:Number, required: true },
     occur:{type: Date,  required: true},
     occur_time:{type:String,  required: true},
@@ -17,6 +17,8 @@ var IncidentSchema = new Schema({
     repoDate:{type: Date, required: true},  
     off_name:{type:String,  required: false}
 });
+
+
 
 // Virtual for IR
 IncidentSchema.virtual('irr').get(function () {
@@ -58,4 +60,6 @@ IncidentSchema.virtual('officer_serialNum').get(function () {
 IncidentSchema.virtual('reportDate').get(function () {
     return this.repoDate;
 });
+
+module.exports = mongoose.model('Incident', IncidentSchema );
 

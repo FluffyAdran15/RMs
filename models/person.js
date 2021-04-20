@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var PersonSchema = new Schema({
+    coder:{type:String, required:false},
     first_name: {type: String, required: true, maxlength: 100 },
     last_name: {type: String, required: true, maxlength: 100 },
     mid_name: {type: String,required: false, maxlength: 1, minlength: 1},
@@ -32,10 +33,10 @@ PersonSchema.virtual('url').get(function () {
 PersonSchema.virtual('fist').get(function () {
     return this.first_name;
 });
-// Virtual for Code
-PersonSchema.virtual('code').get(function () {
-    return this.coder;
-});
+// // Virtual for Code
+// PersonSchema.virtual('coden').get(function () {
+//     return this.coder;
+// });
 // Virtual for Middle Name
 PersonSchema.virtual('mid').get(function () {
     return this.mid_name;

@@ -1,6 +1,9 @@
 var Vehicle = require('../models/vehicle');
 var incident = require('../models/incident');
 var Person = require('../models/person');
+var async = require('async');
+var mongoose = require('mongoose');
+
 
 
 const { body,validationResult } = require('express-validator');
@@ -11,7 +14,7 @@ exports.create_form =  function(req, res) {
 
 
 // Display list ofperson.
-exports.person_list = function (req, res) {
+exports.person_list = function (req,res,next) {
     Person.find()
         .sort([['last_name', 'ascending']])
         .exec(function (err, list_persons) {
@@ -21,43 +24,24 @@ exports.person_list = function (req, res) {
         });
 };
 // Display detail page for a specific Person.
-exports.person_detail = function (req, res, next) {
-   let person = [] 
-   async () =>{
-       let coder = await  Promise.resolve(person.find(coder));  
-       let first_name = await Promise.resolve(person.find(first_name));
-       let last_name = await Promise.resolve(person.find(last_name));
-       let mid_name = await Promise.resolve(person.find(mid_name));   
-       let alias = await Promise.resolve(person.find(alias));
-       let sos_num = await Promise.resolve(person.find(sos_num));  
-       let dl_name = await Promise.resolve(person.find(dl_name));  
-       let racer = await Promise.resolve(person.find(racer));
-       let gen = await Promise.resolve(person.find(gen));
-       let weight = await Promise.resolve(person.find(weight));
-       let height = await Promise.resolve(person.find(height));
-       let eye = await Promise.resolve(person.find(eye));
-       let hair = await Promise.resolve(person.find(hair));
-       let Dob = await Promise.resolve(person.find(Dob));
-       let stm = await Promise.resolve(person.find(stm));
-       let adress = await Promise.resolve(person.find(adress));
-       let phone = await Promise.resolve(person.find(phone));
-       let gang_aff = await Promise.resolve(person.find(gang_aff));
-       let hazard = await Promise.resolve(person.find(hazard))
-       
-   },
-   person.push(coder,first_name,last_name,mid_name,alias,sos_num,
-    dl_name,racer,gen,weight,height,eye,hair,Dob,stm,
-    adress,phone,gang_aff,hazard),
-    function(err, results) {
+exports.person_detail = function(req, res, next) {
+    
+    async.parallel({
+        person: function(callback) {
+            Person.findById(req.params.id)
+              .exec(callback(null,Person))
+        },
+    }, function(err, results) {
         if (err) { return next(err); } // Error in API usage.
-        if (results.person == null) { // No results.
-            var err = new Error('person not found');
+        if (results.person==null) { // No results.
+            var err = new Error('Person not found');
             err.status = 404;
             return next(err);
         }
         // Successful, so render.
-        res.render('person_detail', { person: results.person });
-    };
+        res.render('person_detail', { title: 'Person Detail', person: results.person} );
+    });
+
 };
 // Display Person create form on GET.
 exports.create_person_get = function (req, res, next) {
@@ -80,7 +64,7 @@ exports.person_create_post = [
         // Create Person object with escaped and trimmed data
         var person = new Person(
             {
-                
+                coder: req.body.coder,
                 first_name: req.body.first_name,
                 mid_name: req.body.mid_name,
                 last_name: req.body.last_name,
@@ -154,13 +138,14 @@ exports.person_update_post = [
         // Create Author object with escaped and trimmed data (and the old id!)
         var person = new Person(
             {
+                coder: req.body.coder,
                 first_name: req.body.first_name,
-                mid_name: req.body.middle_intial,
+                mid_name: req.body.mid_name,
                 last_name: req.body.last_name,
                 Dob: req.body.Dob,
                 alias: req.body.alias,
-                hair: req.body.hair_color,
-                racer: req.body.race,
+                hair: req.body.hair,
+                racer: req.body.racer,
                 sos_num: req.body.sos_num,
                 dl_num: req.body.dl_num,
                 stm: req.body.stm,
